@@ -1,0 +1,130 @@
+
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Form Container */
+.form-container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Progress Bar */
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.step {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.step.active {
+    background-color: #28a745;
+}
+
+/* Form Steps */
+.form-step {
+    display: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.form-step.active {
+    display: block;
+}
+
+/* Input Fields */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease-in-out;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #764ba2;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(118, 75, 162, 0.5);
+}
+
+/* Buttons */
+button {
+    padding: 12px 20px;
+    margin: 10px 5px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Primary Button */
+button.next {
+    background-color: #007bff;
+    color: white;
+}
+
+button.next:hover {
+    background-color: #0056b3;
+}
+
+/* Secondary Button */
+button.prev {
+    background-color: #6c757d;
+    color: white;
+}
+
+button.prev:hover {
+    background-color: #545b62;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #1e7e34;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
